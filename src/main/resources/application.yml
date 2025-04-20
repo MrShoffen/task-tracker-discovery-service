@@ -26,3 +26,14 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://${discovery-service-user.server.hostname}:${discovery-service-user.server.port}/eureka
+
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health, info
