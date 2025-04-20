@@ -1,11 +1,13 @@
 plugins {
     id 'java'
-    alias(libs.plugins.spring.boot)
-    alias(libs.plugins.spring.dependency.management)
+    id 'org.springframework.boot' version '3.4.4'
+
+//    alias(libs.plugins.spring.boot)
+//    alias(libs.plugins.spring.dependency.management)
 }
 
 group = 'org.mrshoffen.tasktracker'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.1'
 
 java {
     toolchain {
@@ -15,10 +17,12 @@ java {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
+
 }
 
 dependencies {
-    implementation platform(libs.spring.cloud.dependencies)
+    implementation platform('com.github.MrShoffen:task-tracker-dependencies-versions:1.2.0')
 
     implementation 'org.springframework.boot:spring-boot-starter'
 
