@@ -7,10 +7,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 @EnableEurekaServer
+
 public class TaskTrackerDiscoveryServiceApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(TaskTrackerDiscoveryServiceApplication.class, args);
+        SpringApplication.run(TaskTrackerDiscoveryServiceApplication.class, args);
     }
 
 }

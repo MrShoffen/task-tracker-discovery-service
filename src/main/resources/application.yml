@@ -6,6 +6,9 @@ discovery-service-user:
   credentials:
     username: user
     password: pass
+#
+kafka-user:
+  hostname: test
 ###
 
 spring:
@@ -30,10 +33,15 @@ eureka:
 
 management:
   endpoint:
+
+    restart:
+      access: unrestricted
+    shutdown:  #client
+      access: unrestricted
     health:
       probes:
         enabled: true
   endpoints:
     web:
       exposure:
-        include: health, info
+        include: health, info, shutdown, restart
