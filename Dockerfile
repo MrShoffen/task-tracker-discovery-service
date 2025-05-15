@@ -23,7 +23,7 @@ FROM debian:stable-slim
 
 ARG BUILD_PATH=/opt/build
 ENV JAVA_HOME=/opt/jdk
-ENV PATH="${JAVA_HOME}/bin:${PATH}"
+ENV PATH="${JAVA_HOME}/bi`n:${PATH}"
 
 RUN apt-get update && apt-get install -y curl && \
     rm -rf /var/lib/apt/lists/*
