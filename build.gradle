@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation platform('com.github.MrShoffen:task-tracker-dependencies-versions:2.3.9')
+    implementation platform('com.github.MrShoffen:task-tracker-dependencies-versions:2.5.0')
 
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
